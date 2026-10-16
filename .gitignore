@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Settings with local values
+.env
+
+# Downloaded lab data (fetched by scripts/00_fetch_data.py, not committed)
+data/downloads/
+
+# Generated files
+outputs/
+chroma_db/
+
+# Editors and OS
+.vscode/
+.DS_Store
+Thumbs.db
