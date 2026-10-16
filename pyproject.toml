@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4>=4.15.0",
     "certifi>=2024.2.2", # up-to-date HTTPS certificates for downloads
+    "langchain>=1.4.6",
     "langchain-chroma>=1.1.0",
     "langchain-classic>=1.0.8",
     "langchain-community>=0.4.2",
