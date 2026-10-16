@@ -1,5 +1,22 @@
 """Lab section "Chat message": System, Human and AI messages.
 
+Aim
+    Understand the three message roles and how chat history is passed to a
+    chat model as a list of messages.
+
+What you'll see
+    Each example prints the messages sent (with their role) and the answer:
+    1. system + human message (the system message sets role and style)
+    2. a follow-up question with earlier turns included
+    3. the same follow-up without history
+    4. a human message on its own
+
+What to notice
+    - The model has no memory: it only knows what is in the message list.
+      In example 3 it has to guess what "it" refers to.
+    - This is the idea behind the Memory section later: memory = resending
+      earlier messages.
+
 Run:  uv run python scripts/02_chat_messages.py
 """
 

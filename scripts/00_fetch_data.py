@@ -1,8 +1,19 @@
 """Download the lab's PDF and web page once, into data/downloads/.
 
+Aim
+    Save local copies of the two sources the Documents and RAG sections use,
+    so later scripts work offline and always see the same content.
+
+What you'll see
+    One [OK] line per file with its size, or a [FAIL] line with a fallback.
+
+What to notice
+    Files already downloaded are skipped; use --force to download again.
+
 Run:  uv run python scripts/00_fetch_data.py           (skip files already there)
       uv run python scripts/00_fetch_data.py --force   (download again)
 """
+
 
 import argparse
 import sys

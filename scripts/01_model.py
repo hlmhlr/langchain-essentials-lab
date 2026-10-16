@@ -1,12 +1,23 @@
 """Lab sections "Model" and "Chat model".
 
-The lab first calls watsonx directly (`model.generate`) and then wraps the
-model with `WatsonxLLM` for LangChain. Here both steps use `ChatOllama`:
-  - llm_model(...) returns plain text, like the lab's helper
-  - llm.invoke(...) returns an AIMessage, which also carries metadata
+Aim
+    Send a first prompt to the local model, and see what a LangChain chat
+    model returns compared with a plain-text helper.
+
+What you'll see
+    1. A prompt and its answer as plain text (llm_model).
+    2. The same kind of call with llm.invoke(): the type of the result
+       (AIMessage), its text (.content) and its token counts.
+
+What to notice
+    - The lab's WatsonxLLM returned a string; ChatOllama returns a message
+      object, which also carries metadata such as token usage.
+    - Token counts matter for cost and for staying within the context window.
 
 Run:  uv run python scripts/01_model.py
 """
+
+
 
 from lclab.llm import get_llm, llm_model
 from lclab.utils import print_block, print_header

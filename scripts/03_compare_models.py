@@ -1,9 +1,20 @@
 """Exercise 1: compare two models at two temperatures on three prompt types.
 
-Granite (granite4:tiny-h) and Llama (llama3.2:3b) each answer every prompt
-several times at a "creative" and a "precise" temperature. The summary shows
-how much the answers vary between runs, and the full answers are saved to
-a Markdown report.
+Aim
+    See how the model choice and the temperature setting change the answers
+    to a creative, a factual and an instruction-following prompt.
+
+What you'll see
+    Granite (granite4:tiny-h) and Llama (llama3.2:3b) answer every prompt
+    several times at T=0.8 and T=0.1. A summary table shows, per combination,
+    how many runs gave different answers, how similar the runs were, and the
+    average time. All answers are saved to outputs/model_comparison.md.
+
+What to notice
+    - Low temperature: runs are (nearly) identical, good for facts and formats.
+    - High temperature: more variety, good for creative text, but less
+      predictable on factual and formatting tasks.
+    - The two models differ in style, length and speed for the same prompt.
 
 Run:  uv run python scripts/03_compare_models.py              (3 runs each)
       uv run python scripts/03_compare_models.py --runs 1     (quicker)

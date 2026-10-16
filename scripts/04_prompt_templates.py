@@ -1,5 +1,20 @@
 """Lab section "Prompt templates": string, chat and MessagesPlaceholder.
 
+Aim
+    Build reusable prompts with {placeholders} instead of writing every
+    prompt by hand, and pass a filled template straight into the model.
+
+What you'll see
+    1. PromptTemplate: one string with the placeholders filled in.
+    2. ChatPromptTemplate: a system + user message list, filled in.
+    3. MessagesPlaceholder: a whole list of messages inserted into the
+       template, then the chain `prompt | llm` answering it.
+
+What to notice
+    - invoke() on a template does not call the model; it only builds the
+      prompt. The model is called when the template is piped into it.
+    - The same template can be reused with different inputs.
+
 Run:  uv run python scripts/04_prompt_templates.py
 """
 

@@ -1,5 +1,22 @@
 """Lab section "Output parsers": JSON parser and comma-separated list parser.
 
+Aim
+    Turn the model's free-text answer into Python data that code can use
+    directly, instead of parsing strings by hand.
+
+What you'll see
+    1. JsonOutputParser with a Pydantic schema (Riddle): the answer comes
+       back as a Python dict with "question" and "answer".
+    2. CommaSeparatedListOutputParser: "five programming languages" comes
+       back as a Python list.
+    Each result is printed with its Python type (dict / list).
+
+What to notice
+    - get_format_instructions() writes the formatting rules into the prompt
+      for you; the parser then converts the reply.
+    - Parsing only works if the model follows the format. Small models
+      sometimes add extra text, which makes the parser fail (an error).
+
 Run:  uv run python scripts/05_output_parsers.py
 """
 

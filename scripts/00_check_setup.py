@@ -1,5 +1,15 @@
 """Check that Ollama is running and the three models work.
 
+Aim
+    Confirm the local setup before running any lab script.
+
+What you'll see
+    One [OK] or [FAIL] line per check: Ollama reachable, all three models
+    downloaded, each chat model answers, the embedding model returns a vector.
+
+What to notice
+    A [FAIL] line tells you the exact fix (start Ollama, or which model to pull).
+
 Run:  uv run python scripts/00_check_setup.py
 """
 

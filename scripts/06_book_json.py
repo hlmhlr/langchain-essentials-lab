@@ -1,8 +1,20 @@
 """Exercise 2: JSON output parser, tested with three books.
 
+Aim
+    Build a prompt | llm | JsonOutputParser chain that returns structured
+    book information (title, author, year, genre).
+
+What you'll see
+    For "1984", "The Hobbit" and "Sapiens": the type of the result (dict)
+    and each field read from it.
+
+What to notice
+    - The fields are read with result["title"] etc. like any Python dict.
+    - The values are only as accurate as the model's knowledge: a small
+      model may get a year or genre wrong even when the format is right.
+
 Run:  uv run python scripts/06_book_json.py
 """
-
 from lclab.llm import get_llm
 from lclab.parsers import book_chain
 from lclab.utils import print_header
