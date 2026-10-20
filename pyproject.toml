@@ -27,6 +27,9 @@ build-backend = "hatchling.build"
 packages = ["src/lclab"]
 
 [dependency-groups]
+app = [
+    "streamlit>=1.66.0",
+]
 dev = [
     "pytest>=8",
     "numpy>=2.0",  # needed by LangChain's fake embeddings in tests
