@@ -1,0 +1,12 @@
+[
+  {"question": "According to the WHO, what share of people worldwide face mental disorders?", "phrase": "one in four"},
+  {"question": "Where does suicide rank as a cause of death among young people?", "phrase": "second biggest reason"},
+  {"question": "What temperature setting was used for the ChatOpenAI model?", "phrase": "temperature value of 0.5"},
+  {"question": "Which kinds of messages can LangChain work with?", "phrase": "types of messages supported"},
+  {"question": "Which prompt template class is the most basic one?", "phrase": "simplest is the PromptTemplate"},
+  {"question": "Why are chains useful for developers working on complicated tasks?", "phrase": "break down complex tasks"},
+  {"question": "How does the window buffer memory decide which interactions to keep?", "phrase": "uses the last K"},
+  {"question": "What is the final step of the MindGuide architecture?", "phrase": "Response to Streamlit"},
+  {"question": "How is Streamlit described in the paper?", "phrase": "open-source Python library"},
+  {"question": "What technique do the authors plan to add in future work?", "phrase": "Retrieval-Augmented Generation"}
+]
